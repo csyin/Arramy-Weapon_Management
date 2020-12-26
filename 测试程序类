@@ -1,0 +1,23 @@
+public class Test {
+    public static void main(String[] args) {
+        Arramy arramy=new Arramy(4);
+        Tank tank=new Tank();
+        GaoShePao gaoShePao=new GaoShePao();
+        ZhanDouJi zhanDouJi=new ZhanDouJi();
+        YunShuChe yunShuChe=new YunShuChe();
+        try {
+            arramy.AddWeapon(tank);
+            arramy.AddWeapon(gaoShePao);
+            arramy.AddWeapon(zhanDouJi);
+            arramy.AddWeapon(yunShuChe);
+
+        } catch (IndexWeaponBoundOfException e) {
+            System.out.println(e.getMessage());
+        }
+        arramy.MoveAll();
+        arramy.ShootAll();
+
+
+
+    }
+}
