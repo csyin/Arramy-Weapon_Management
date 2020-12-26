@@ -1,0 +1,17 @@
+public class Tank extends Weapon implements Shoot,Move {
+
+    @Override
+    public void move() {
+        System.out.println("坦克在移动进攻");
+    }
+
+    @Override
+    public void shoot() {
+        System.out.println("坦克在进行发炮");
+
+    }
+
+    @Override
+    public String toString() {
+        return "坦克";
+    }
