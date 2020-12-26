@@ -1,0 +1,11 @@
+public class YunShuChe extends Weapon implements Move{
+    @Override
+    public void move() {
+        System.out.println("运输车在进行运输物资");
+    }
+
+    @Override
+    public String toString() {
+        return "运输车";
+    }
+}
