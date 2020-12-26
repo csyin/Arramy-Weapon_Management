@@ -1,0 +1,18 @@
+public class ZhanDouJi extends  Weapon implements Move,Shoot{
+
+    @Override
+    public void move() {
+        System.out.println("战斗机在飞行");
+    }
+
+    @Override
+    public void shoot() {
+        System.out.println("战斗机在进行攻击");
+
+    }
+
+    @Override
+    public String toString() {
+        return "战斗机";
+    }
+}
