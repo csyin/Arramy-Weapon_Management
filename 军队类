@@ -1,0 +1,41 @@
+public class Arramy {
+    private Weapon [] weapons;
+    public Arramy(int count){
+        weapons=new Weapon[count];
+    }
+    public void AddWeapon(Weapon weapon) throws IndexWeaponBoundOfException{
+        for (int i=0;i<weapons.length;i++){
+            if(weapons[i]==null){
+                weapons[i]=weapon;
+                System.out.println(weapon.toString()+"：武器已添加");
+                return;
+            }
+          // System.out.println(weapon.toString()+"：武器已添加");
+        }
+        //System.out.println(weapon+"：武器已添加");
+        throw new IndexWeaponBoundOfException("武器数量以达到上限，不能继续进行添加");
+    }
+
+
+    //添加攻击武器方法
+    public void ShootAll(){
+        for (int i=0;i<weapons.length;i++){
+            if (weapons[i] instanceof Shoot){
+                Shoot shootweapon=(Shoot) weapons[i];
+                shootweapon.shoot();
+            }
+        }
+    }
+
+    //添加移动武器方法
+    public void MoveAll(){
+        for (int i=0;i<weapons.length;i++){
+            if (weapons[i] instanceof Move){
+                Move moveweapon=(Move) weapons[i];
+                moveweapon.move();
+            }
+        }
+    }
+
+
+}
