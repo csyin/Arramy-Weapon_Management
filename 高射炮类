@@ -1,0 +1,13 @@
+public class GaoShePao extends Weapon implements Shoot{
+
+
+    @Override
+    public void shoot() {
+        System.out.println("高射炮在发炮");
+    }
+
+    @Override
+    public String toString() {
+        return "高射炮";
+    }
+}
